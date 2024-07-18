@@ -1,0 +1,105 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #838383;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book-container {
+    width: 800px;
+    height: 500px;
+    perspective: 1500px;
+    margin-bottom: 20px; 
+}
+
+.book {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.page {
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 2.5s ease;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.left-page {
+    left: 0;
+    background-color: #ffffff;
+}
+
+.right-page {
+    left: 50%;
+    transform-origin: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.page img {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+.author-name {
+    position: absolute;
+    bottom: 10px; 
+    right: 10px; 
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #000;
+}
+
+.music-player {
+    text-align: center;
+    color: #007BFF; 
+    cursor: pointer; 
+}
+
+.music-player i {
+    font-size: 70px; 
+    margin-right: 10px; 
+    margin-top: 10px; 
+}
+
+#song-duration {
+    font-size: 16px;
+    color: #333; 
+    margin-top: 5px; 
+}
+
+#lyrics-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #333;
+    font-size: 20px;
+    font: bold;
+    text-align: center;
+    padding: 20px;
+}
